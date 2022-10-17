@@ -37,3 +37,4 @@ Route::middleware([
 Route::inertia('/indexconinertia', 'Dashboard/Post/Index');
 
 Route::get('/posts', [App\Http\Controllers\Dashboard\PostController::class, 'index']);
+Route::resource('/category', App\Http\Controllers\Dashboard\CategoryController::class);

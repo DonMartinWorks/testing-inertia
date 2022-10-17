@@ -33,3 +33,7 @@ Route::middleware([
         return Inertia::render('Dashboard');
     })->name('dashboard');
 });
+
+Route::inertia('/indexconinertia', 'Dashboard/Post/Index');
+
+Route::get('/posts', [App\Http\Controllers\Dashboard\PostController::class, 'index']);
